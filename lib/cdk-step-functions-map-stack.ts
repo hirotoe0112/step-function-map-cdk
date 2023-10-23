@@ -56,7 +56,7 @@ export class CdkStepFunctionsMapStack extends cdk.Stack {
     // 人物一覧を分割するためのMap関数
     const mapPersonsProcessState = new Map(this, 'mapPersons', {
       itemsPath: '$.Payload',
-      maxConcurrency: 1,
+      maxConcurrency: 5,
       resultPath: '$.mapOutput',
       parameters: {
         param: {
